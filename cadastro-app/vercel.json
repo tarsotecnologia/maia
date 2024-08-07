@@ -8,6 +8,12 @@
         "source": "/api/cadastro",
         "destination": "/api/cadastro.js"
       }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
   }
   
