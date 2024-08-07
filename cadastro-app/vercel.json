@@ -5,7 +5,7 @@
     ],
     "rewrites": [
       {
-        "source": "/api/cadastro",
+        "source": "/(.*)",
         "destination": "/api/cadastro.js"
       }
     ],
