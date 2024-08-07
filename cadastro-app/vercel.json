@@ -5,8 +5,8 @@
     ],
     "rewrites": [
       {
-        "source": "/pages/api/cadastro",
-        "destination": "/pages/api/cadastro.js"
+        "source": "/api/cadastro",
+        "destination": "/api/cadastro.js"
       }
     ]
   }
