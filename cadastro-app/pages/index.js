@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../styles/styles.css';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ export default function Home() {
     e.preventDefault();
     try {
       await axios.post('/api/cadastro', formData);
-      alert('Cadastro realizado com sucesso!');
+      alert('Cadastro realizado com sucesso!!');
     } catch (error) {
       alert('Erro ao realizar o cadastro');
       console.error(error);
@@ -30,7 +31,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Cadastro</h1>
+      <h1>Cadastro Facial Moradores - Edificio Maia</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Unidade:</label>
@@ -56,10 +57,14 @@ export default function Home() {
           <label>RG:</label>
           <input type="text" name="rg" value={formData.rg} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Proprietário:</label>
-          <input type="text" name="proprietario" value={formData.proprietario} onChange={handleChange} required />
-        </div>
+        <label>
+        Proprietário:
+        <select name="proprietario" value={formData.proprietario} onChange={handleChange} required>
+          <option value="">Selecione</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+      </label>
         <button type="submit">Cadastrar</button>
       </form>
     </div>
