@@ -6,7 +6,7 @@ const creds = require('../../credentials.json'); // Substitua pelo caminho do se
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const doc = new GoogleSpreadsheet('Cadastro Geral'); // Substitua pelo ID da sua planilha
+      const doc = new GoogleSpreadsheet('1bYZNB2t_nHNc7EucUNhjTTRlOR1pk4HvCLNWinmrOeY'); // Substitua pelo ID da sua planilha
       await doc.useServiceAccountAuth(creds);
       await doc.loadInfo();
 
