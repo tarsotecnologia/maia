@@ -1,12 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "next.config.js", "use": "@vercel/next" }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/cadastro",
-      "destination": "/api/cadastro.js"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      { "src": "next.config.js", "use": "@vercel/next" }
+    ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/api/cadastro.js"
+      }
+    ]
+  }
+  
